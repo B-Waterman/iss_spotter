@@ -18,14 +18,14 @@
 //   console.log("It worked this time! Returned coordinates:", coordinates);
 // });
 
-const {fetchISSFlyOverTimes} = require('./iss');
+// const {fetchISSFlyOverTimes} = require('./iss');
 
-const exampleCoords = {latitude: '48.4284207', longitude: '-123.3656444'};
+// const exampleCoords = {latitude: '48.4284207', longitude: '-123.3656444'};
 
-fetchISSFlyOverTimes(exampleCoords, (error, passTimes) => {
-  if (error) {
-    console.log("Sorry, something's wrong here, try again!", error);
-    return;
-  }
-  console.log("Success condition achieved! Returned fly-over times:", passTimes);
-});
+// fetchISSFlyOverTimes(exampleCoords, (error, passTimes) => {
+//   if (error) {
+//     console.log("Sorry, something's wrong here, try again!", error);
+//     return;
+//   }
+//   console.log("Success condition achieved! Returned fly-over times:", passTimes);
+// });
