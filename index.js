@@ -29,12 +29,22 @@
 //   }
 //   console.log("Success condition achieved! Returned fly-over times:", passTimes);
 // });
-
 const {nextISSTimesForMyLocation} = require('./iss');
+
+const printPassTimes = function(passTimes) {
+  for (const pass of passTimes) {
+    const datetime = new Date(0);
+    datetime.setUTCSeconds(pass.risetime);
+    const duration = pass.duration;
+    console.log(`Next pass at ${datetime} for ${duration} seconds!`);
+  }
+};
+
 
 nextISSTimesForMyLocation((error, passTimes) => {
   if (error) {
-    return console.log("No, no, no, no. All wrong. Try again.", error);
+    return console.log("It didn't work!", error);
   }
-  console.log(passTimes) //Ayyyy, it actually worked well done!
+  // success, print out the deets!
+  printPassTimes(passTimes);
 });
