@@ -29,3 +29,12 @@
 //   }
 //   console.log("Success condition achieved! Returned fly-over times:", passTimes);
 // });
+
+const {nextISSTimesForMyLocation} = require('./iss');
+
+nextISSTimesForMyLocation((error, passTimes) => {
+  if (error) {
+    return console.log("No, no, no, no. All wrong. Try again.", error);
+  }
+  console.log(passTimes) //Ayyyy, it actually worked well done!
+});
