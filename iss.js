@@ -25,5 +25,13 @@ const fetchMyIP = function(callback) {
   });
 };
 
+const fetchCoordsByIP = function(ip, callback) {
+  request(`http://ipwho.is/${ip}`, (error, response, body) => {
+    if (error) {
+      callback(error, null);
+      return;
+    }
+  });
+}
 
 module.exports = {fetchMyIP};
